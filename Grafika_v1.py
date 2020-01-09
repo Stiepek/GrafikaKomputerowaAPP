@@ -41,5 +41,17 @@ def Prosta(number1, number2, number3, number4):
 root = Tk()
 root.title('Grafika Komputerowa APP')
 
+content1 = Label(root,text='Wprowadź punkt początkowy    x=           y= ')
+content1.place(x=10,y=10)
+content2 = Label(root,text='Wprowadź punkt końcowy         x=           y= ')
+content2.place(x=10,y=35)
+
+prostaWithArguments = partial(Prosta, number1, number2, number3, number4)
+
+action = Button(root,text='Draw',width=20, command=prostaWithArguments)
+action.place(x=200,y=470)
+clear = Button(root,text='Exit',width=20, command=root.destroy)
+clear.place(x=50,y=470)
+
 root.geometry("450x500")
 mainloop()
