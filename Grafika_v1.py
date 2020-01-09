@@ -14,6 +14,7 @@ def Bresenham(x1, y1, x2, y2):
             slope_error_new = slope_error_new - 2 * (x2 - x1)
     return tab
 
+
 def Prosta(number1, number2, number3, number4):
     w = number1.get()
     z = number2.get()
@@ -38,13 +39,31 @@ def Prosta(number1, number2, number3, number4):
         canvas.pack(fill=BOTH, expand=1)
         canvas.place(x=20,y=60)
 
+
 root = Tk()
 root.title('Grafika Komputerowa APP')
+
+number1 = StringVar()
+number2 = StringVar()
+number3 = StringVar()
+number4 = StringVar()
 
 content1 = Label(root,text='Wprowadź punkt początkowy    x=           y= ')
 content1.place(x=10,y=10)
 content2 = Label(root,text='Wprowadź punkt końcowy         x=           y= ')
 content2.place(x=10,y=35)
+
+iksy1 = Entry(root, width=3, textvariable=number1)
+iksy1.place(x=195,y=10)
+
+igrek1 = Entry(root, width=3, textvariable=number2)
+igrek1.place(x=242,y=10)
+
+iksy2 = Entry(root, width=3, textvariable=number3)
+iksy2.place(x=195,y=35)
+
+igrek2 = Entry(root, width=3, textvariable=number4)
+igrek2.place(x=242,y=35)
 
 prostaWithArguments = partial(Prosta, number1, number2, number3, number4)
 
