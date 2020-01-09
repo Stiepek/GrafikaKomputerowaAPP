@@ -13,3 +13,9 @@ def Bresenham(x1, y1, x2, y2):
             y = y + 1
             slope_error_new = slope_error_new - 2 * (x2 - x1)
     return tab
+
+root = Tk()
+root.title('Grafika Komputerowa APP')
+
+root.geometry("450x500")
+mainloop()
